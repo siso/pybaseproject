@@ -35,7 +35,8 @@ nosetests.xml
 .project
 .pydevproject
 
-# swap and temp files
+# log, swap and temp files
 .*.swp
 *bak
 *~
+*log
