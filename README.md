@@ -64,6 +64,27 @@ pybaseproject.foo
 Hola!
 ```
 
+## Logging
+
+Logging can be configured with 'logging.conf' (see **pybaseproject.foo**), or hardcoding settings directly in source code (easier to set up but harder to maintain).
+
+### Coloured or non-coloured stdout
+
+Logging to stdout supports ANSI-coloured output. To activate it **logging.conf** should look like:
+
+```
+[logger_root]
+...
+handlers=fileHandler,colouredConsoleHandler
+```
+
+If default black-and-white output is OK:
+
+```
+[logger_root]
+...
+handlers=fileHandler,consoleHandler
+```
 
 ## Author
 
@@ -76,3 +97,4 @@ Simone Soldateschi - simone.soldateschi@gmail.com
 - [Getting Started With setuptools and setup.py](http://pythonhosted.org/an_example_pypi_project/setuptools.html)
 - [Installing python scripts](http://matthew-brett.github.io/pydagogue/installing_scripts.html)
 - [What is the best project structure for a Python application?](http://stackoverflow.com/questions/193161/what-is-the-best-project-structure-for-a-python-application)
+- [Good logging practice in Python](http://victorlin.me/posts/2012/08/26/good-logging-practice-in-python)
